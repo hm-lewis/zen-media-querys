@@ -1,0 +1,93 @@
+body {
+	font-family: Gothan, Arial, Helvetica, sans-serif;
+	background-color: darkcyan;
+	padding: 10px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+.wrapper > * {
+	padding: 10px;
+	flex-grow: 1;
+	flex-basis: 100%
+}
+
+.header {
+	background-color: gold;
+}
+
+.main {
+	background-color: darkorange;
+}
+
+.aside-1, .aside-2, footer {
+	padding: 10px;
+}
+
+.aside-1 {
+	background-color: mediumseagreen;
+}
+
+.aside-2 {
+	background-color: seagreen;
+}
+
+footer {
+	background-color: lightgreen;
+}
+
+/* Tablet näkymän css-säännöt */
+
+@media only screen and (min-width: 426px) {
+		.wrapper {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}	
+		
+		.wrapper .aside-1 {
+			flex-basis: 0px;
+		} 
+
+		.wrapper .aside-2 {
+			flex-basis: 0px;
+		}
+
+		.footer {
+			clear: both;
+		}
+		
+	}
+	
+	
+	/* desktop - näkymän säännöt */
+@media only screen and (min-width: 769px) {
+		.wrapper {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}	
+		
+		.wrapper .main {
+			flex-basis: 0px;
+			flex-grow: 2;
+		}
+
+		.wrapper .aside-1 {
+			flex-basis: 0px;
+		} 
+
+		.wrapper .aside-2 {
+			flex-basis: 0px;
+		}
+
+
+		.footer {
+			clear: both;
+		}
+
+	}
+
+
